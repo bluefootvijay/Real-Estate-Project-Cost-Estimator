@@ -137,7 +137,7 @@ BODY = _flatten(
     <hr class="rec-rule">
     <div class="rec-positioning">
     <div class="who">ARCHITECT<br>DATA SCIENTIST</div>
-    <p>Years of practicing architecture mean TNCDBR ceilings, High Rise Building/Non High Rise Building tiers, and FSI rules aren't reference material — they're fluent. That's the lens this portfolio brings to spatial data science, GIS &amp; urban analytics, and AVM work.</p>
+    <p>Years of practicing architecture mean State Development Regulations, High Rise Building/Non High Rise Building tiers, and FSI rules aren't reference material — they're fluent. That's the lens this portfolio brings to spatial data science, GIS &amp; urban analytics, and AVM work.</p>
     </div>
     <div class="rec-content">
     <div class="rec-copy">
