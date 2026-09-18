@@ -14,13 +14,11 @@ The output is a trained LightGBM model, a comparison against HistGradientBoostin
 
 All three algorithms (HistGradientBoostingRegressor, LightGBM, XGBoost) converge at:
 
-Metric	Range
-
-R²	≈ 0.26 – 0.30
-
-MAE	≈ ₹2,000 – 2,500 / sqft
-
-Median APE	≈ 23 – 27%
+| Metric | Range |
+|---|---|
+| R² | ≈ 0.26 – 0.30 |
+| MAE | ≈ ₹2,000 – 2,500 / sqft |
+| Median APE | ≈ 23 – 27% |
 
 
 That convergence across three different algorithm families is itself the finding: this is a feature/data ceiling, not an algorithm problem. TNRERA filings don't capture finish quality, materials, amenities, or micro-location detail — the things that actually separate a luxury project from a budget one at the same coordinates. Land cost also shows high within-neighborhood variance from plot-level factors (shape, road access) that district- or coordinate-level features can't resolve.
