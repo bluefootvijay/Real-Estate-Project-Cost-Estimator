@@ -13,9 +13,13 @@ The output is a trained LightGBM model, a comparison against HistGradientBoostin
 ### Results, honestly
 
 All three algorithms (HistGradientBoostingRegressor, LightGBM, XGBoost) converge at:
+
 Metric	Range
+
 R²	≈ 0.26 – 0.30
+
 MAE	≈ ₹2,000 – 2,500 / sqft
+
 Median APE	≈ 23 – 27%
 
 
@@ -34,17 +38,18 @@ Project_Stick/
 
 ## Pipeline
 
-Data Cleaning & Field Extraction — parse TNRERA PDF filings into structured records; audit-flag anomalies 
+Data Cleaning & Field Extraction — parse TNRERA PDF filings into structured records; audit-flag anomalies
+
 EDA & Feature Engineering — Creating key metrics from the source features - like FSI, Project Cost per Sqft etc.
+
 Modelling (`04_TNRERA_MODELLING.ipynb`) — train and compare HistGradientBoostingRegressor, LightGBM, and XGBoost natively on NaN + categorical dtypes (no imputation/one-hot needed); log-transform the target
+
 App — LightGBM model (best median APE) exported via `joblib`, served through a Streamlit app with a map-based price predictor and a model comparison page
 
 ## Data notes
 
 Free geocoding (Nominatim) collapses Indian addresses to district centroids and was unusable at the required granularity — coordinates are taken directly from TNRERA filings instead
-27 of 943 mapped rows had coordinates outside Tamil Nadu's bounding box (7 lat/lon swaps, 20 corrupted); dropped from the dashboard map only, left untouched in the underlying model
-TNHB/TNUHDB government-scheme rows are excluded from all modeling as they would not capture real market values.
-See `notebooks/04_TNRERA_MODELLING.ipynb` for the full leakage-column exclusion list.
+27 of 943 mapped rows had coordinates outside Tamil Nadu's bounding box (7 lat/lon swaps, 20 corrupted); dropped from the dashboard map only, left untouched in the underlying model TNHB/TNUHDB government-scheme rows are excluded from all modeling as they would not capture real market values. See `notebooks/04_TNRERA_MODELLING.ipynb` for the full leakage-column exclusion list.
 
 ## Stack
 
